@@ -1,4 +1,3 @@
-
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # Author: Pan Yang (panyangnlp@gmail.com)
@@ -10,8 +9,6 @@ import logging
 import os.path
 import six
 import sys
-reload(sys)  
-sys.setdefaultencoding('utf-8')
 
 from gensim.corpora import WikiCorpus
 
@@ -32,7 +29,7 @@ if __name__ == '__main__':
     i = 0
 
     output = open(outp, 'w')
-    wiki = WikiCorpus(inp, dictionary={})
+    wiki = WikiCorpus(inp, lemmatize=False, dictionary={})
     for text in wiki.get_texts():
         if six.PY3:
             output.write(bytes(' '.join(text), 'utf-8').decode('utf-8') + '\n')

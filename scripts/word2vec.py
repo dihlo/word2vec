@@ -4,8 +4,6 @@ import gensim
 import logging
 import os
 import sys  
-reload(sys)  
-sys.setdefaultencoding('utf-8')
 import io
 
 
@@ -70,6 +68,36 @@ if __name__ == '__main__':
         model.wv.most_similar(
             positive=w1,
             topn=6))
+    w1 = ["суруйаачыта"]
+    print(
+        "Most similar to {0}".format(w1),
+        model.wv.most_similar(
+            positive=w1,
+            topn=6))
+    w1 = ["куорат"]
+    print(
+        "Most similar to {0}".format(w1),
+        model.wv.most_similar(
+            positive=w1,
+            topn=6))
+    w1 = ["маҥан"]
+    print(
+        "Most similar to {0}".format(w1),
+        model.wv.most_similar(
+            positive=w1,
+            topn=6))    
+    w1 = ["сырдык"]
+    print(
+        "Most similar to {0}".format(w1),
+        model.wv.most_similar(
+            positive=w1,
+            topn=6))    
+    w1 = ["сүүрэр"]
+    print(
+        "Most similar to {0}".format(w1),
+        model.wv.most_similar(
+            positive=w1,
+            topn=6))    
 
 
 
