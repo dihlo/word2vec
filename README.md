@@ -15,3 +15,4 @@ python wikitodata.py #do dataset from wikipedia
 
 python ./scripts/word2vec.py #learn model and test some words
 
+ 
